@@ -1,9 +1,15 @@
 import "./App.css";
+import Homepage from "./component/Homepage";
+import { DndProvider } from "react-dnd";
+import { HTML5Backend } from "react-dnd-html5-backend";
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello I am the basic setup</h1>
+      <DndProvider backend={HTML5Backend}>
+        <Homepage />
+      </DndProvider>
+      {/* //the entire app structure is included in the homepage */}
     </div>
   );
 }
